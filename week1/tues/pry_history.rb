@@ -22,3 +22,15 @@ best_teacher.object_id
 best_teacher.reverse.object_id
 2.3 + 3.4 
 exit
+1.to_s("2")
+1.to_s("1")
+1.count(2)
+1.to_s(2)
+99.to_s(2)
+99.to_s(16)
+99.to_s(14)
+14.to_s(16)
+14.to_s(26)
+99.to_s(26)
+12341234.to_s(26)
+exit
