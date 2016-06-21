@@ -34,3 +34,6 @@ exit
 99.to_s(26)
 12341234.to_s(26)
 exit
+ls [
+ls []
+exit

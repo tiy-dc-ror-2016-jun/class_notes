@@ -3,8 +3,7 @@ user_input = "7.0"  # => "7.0"
 user_input.to_i.to_s == user_input || user_input.to_f.to_s == user_input  # => true
 
 def is_number?(string)
-  is_it_actually_a_number_boolean = string.to_i.to_s == string || string.to_f.to_s == string
-  return is_it_actually_a_number_boolean
+  string.to_i.to_s == string || string.to_f.to_s == string
 end                                                                                           # => :is_number?
 
 def is_number?(string)
