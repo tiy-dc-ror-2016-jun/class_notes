@@ -25,7 +25,7 @@ class Bottle
   end
 
   def gulp
-    @volume -= 50
+    @volume -= 50 unless is_open?
   end
 
   def brand
