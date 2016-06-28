@@ -15,6 +15,11 @@ class Currency
   def +(other)
     if @code == other.code
       @value + other.value
+    else
+      raise DifferentCurrencyCodeError, "We don't accepts your puny currency"
     end
   end
+end
+
+class DifferentCurrencyCodeError < StandardError
 end
