@@ -28,14 +28,8 @@ end
 
 begin
   StudentsMigration.migrate(:down)
-rescue
-end
-
-StudentsMigration.migrate(:up)
-
-begin
   MembershipsMigration.migrate(:down)
-rescue
+ensure
+  StudentsMigration.migrate(:up)
+  MembershipsMigration.migrate(:up)
 end
-
-MembershipsMigration.migrate(:up)
