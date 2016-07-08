@@ -1,0 +1,22 @@
+,,,,,,
+,Students,,,Groups,,
+,id,name,,id,student_id,name
+,1,Russell,,1,1,DC June
+,2,Martin,,2,2,DC June
+,3,Chris,,3,3,DC June
+,,,,,,
+,Students,,,,Groups,
+,id,name,group_id,,id,name
+,1,Russell,1,,1,DC June
+,2,Martin,1,,,
+,3,Chris,1,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
