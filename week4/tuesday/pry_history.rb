@@ -29,3 +29,12 @@ f.forecast
 exit
 f.forecast
 exit
+weather_as_hash
+weather_as_hash.class
+ls weather_as_hash
+ls weather_as_hash.respond_to?
+ls weather_as_hash.response
+weather_as_hash.response
+weather_as_hash.parsed_response
+weather_as_hash.parsed_response.class
+exit
