@@ -46,3 +46,10 @@ File.write "./test/create_repo.json", contents
 exit!
 payload
 exit!
+require 'httpparty'
+require 'http_party'
+require 'HTTPparty'
+HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
+require 'httparty'
+response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
+exit
