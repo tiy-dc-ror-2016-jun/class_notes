@@ -2,6 +2,7 @@ require "bundler/setup"
 require "sinatra/base"
 require "pry"
 require "./hw_review/weather.rb"
+require "./weather_forecast_presentor"
 
 class WeatherUndergroundTwo < Sinatra::Base
 
@@ -10,17 +11,7 @@ class WeatherUndergroundTwo < Sinatra::Base
   end
 
   get "/weather/for/zip/:zipcode" do
-    q = Weathersummary.new("06d952a02fe95bb3", params["zipcode"])
-    forecast = q.current_weather_10_day
-
-    weather_forecast_presentation = ""
-    forecast["forecast"]["txt_forecast"]["forecastday"].each do |daily_forecast|
-      weather_forecast_presentation += "
-      <strong>#{daily_forecast["title"]}</strong> : #{daily_forecast["fcttext"]}<br>
-      "
-    end
-
-    weather_forecast_presentation
+    WeatherForecastPresentor.new(params["zipcode"]).generate
   end
 
   run! if app_file == $0
