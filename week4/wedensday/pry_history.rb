@@ -16,3 +16,16 @@ ls
 params
 params["zip"]
 exit!
+params
+params["zipcode"]
+exit!
+response
+response.body
+exit!
+response
+ls
+response.body
+exit
+ls
+response.status
+exit

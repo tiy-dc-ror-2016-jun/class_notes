@@ -6,12 +6,11 @@ require "./hw_review/weather.rb"
 class WeatherUndergroundTwo < Sinatra::Base
 
   get "/hello_world" do
-    binding.pry
     "Hi Class"
   end
 
-  get "/zipcode" do
-    q = Weathersummary.new("06d952a02fe95bb3", params["zip"])
+  get "/weather/for/zip/:zipcode" do
+    q = Weathersummary.new("06d952a02fe95bb3", params["zipcode"])
     forecast = q.current_weather_10_day
 
     weather_forecast_presentation = ""
