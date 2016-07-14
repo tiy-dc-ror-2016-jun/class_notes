@@ -1,0 +1,13 @@
+key: value
+students:
+  - martin
+  - "chris"
+  - lisa
+
+group:
+  cohort:
+    june:
+      students:
+        - martin
+        - "chris"
+        - lisa
