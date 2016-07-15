@@ -13,7 +13,6 @@ class ForecastTest < Minitest::Test
       "https://api.forecast.io/forecast/c841c27242dd50d1a1744bf123872c95/38.9059168,-77.0425075"
     ).to_return(body: response, headers: { content_type: "application/json"})
 
-
     f = Forecast.new("c841c27242dd50d1a1744bf123872c95", 38.9059168, -77.0425075)
 
     weather_as_hash = f.forecast
