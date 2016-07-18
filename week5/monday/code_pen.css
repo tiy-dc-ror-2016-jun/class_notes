@@ -1,0 +1,29 @@
+
+header {
+  width:500px;
+  position:relative;
+}
+
+h1#title {
+    color: blue;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid red;
+    width: 200px;
+/*     float: right; */
+/*     position: absolute;
+    bottom: 0px;
+    left: 10px; */
+
+}
+
+
+li.student{
+  border: 3px dashed green;
+  margin-bottom: 10px;
+}
+
+section p{
+  border: 3px dashed green;
+  margin-bottom: 10px;
+}
