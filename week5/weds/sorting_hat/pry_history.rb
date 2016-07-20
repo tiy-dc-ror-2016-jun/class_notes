@@ -1,0 +1,23 @@
+Dir.glob("./app/models/*.rb")
+exit
+Dir.glob("./app/models/*.rb")
+Dir.glob("app/models/*.rb")
+ls
+exit
+params
+exit
+params
+exit
+params
+params["user"]
+exit
+params
+exit
+params
+exit!
+params
+params["user"]
+User.new(name: params["user"]["name"])
+params["user"]["name"]
+User.new(params["user"])
+exit
