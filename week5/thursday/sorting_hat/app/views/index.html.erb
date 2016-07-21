@@ -1,47 +1,52 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Sorting Hat</h1>
+<h1>Sorting Hat</h1>
 
-
+<table>
+  <thead>
+    <tr>
+      <th>
+        Student
+      </th>
+      <th>
+        Last Picked
+      </th>
+    </tr>
+  </thead>
+  <tbody>
     <% @users.each do |user| %>
-      <p>
-        <%= user.name %>
-        <%= user.phone_number %>
-        <%= user.email %>
-      </p>
+      <tr>
+        <td>
+          <%= user.name %>
+        </td>
+        <td>
+          <% unless user.picks.empty? %>
+            <%= user.picks.order(picked_at: :desc).first.picked_at %>
+          <% end %>
+        </td>
+
+        <td>
+          <a href="/users/<%= user.id %>/edit">Edit</a>
+        </td>
+      </tr>
     <% end %>
+  </tbody>
+</table>
 
 
-    <h4>Add student</h4>
-    <form class="" action="/users" method="post">
-      <label for="name">Name</label>
-      <input type="text" name="user[name]" value="" placeholder="Jane Smith">
+<form action="/pick" method="post">
+  <input type="submit" name="submit" value="Pick Student!">
+</form>
 
-      <label for="email">Email</label>
-      <input id="email" type="text" name="user[email]" value="" placeholder="jobs@emails.com">
+<h4>Add student</h4>
 
+<form class="" action="/users" method="post">
+  <label for="name">Name</label>
+  <input type="text" name="user[name]" value="" placeholder="Jane Smith">
 
-      <!-- <label for="coolcheckbox">
-        Cool
-        <input id="coolcheckbox" type="checkbox" name="user[traits][]" value="cool">
-      </label>
+  <label for="email">Email</label>
+  <input id="email" type="text" name="user[email]" value="" placeholder="jobs@emails.com">
 
-      <label for="lamecheckbox">
-        Lame
-        <input id="lamecheckbox"type="checkbox" name="user[traits][]" value="lame">
-      </label> -->
+  <label for="phone_number">Phone</label>
+  <input type="text" name="user[phone_number]" value="" placeholder="(xxx) xxx-xxxx">
 
-      <label for="phone_number">Phone</label>
-      <input type="text" name="user[phone_number]" value="" placeholder="(xxx) xxx-xxxx">
-
-      <input type="submit" name="submit" value="Save">
-    </form>
-
-
-  </body>
-</html>
+  <input type="submit" name="submit" value="Save">
+</form>
