@@ -8,7 +8,7 @@ a = Human.new
 ls a
 a.get_self
 show-source a.get_self
-class Human 
+class Human
   def eat
     puts "eating"
   end
@@ -19,7 +19,7 @@ class Human
 end
 exit
 ls ""
-def my_method 
+def my_method
   puts "This my method and it is mine!"
 end
 methods
@@ -33,15 +33,15 @@ m.receiver
 m.super_method
 m = method(:my_method)
 m.call
-sstudents = ["Martin", "chris", "Austen", "lisa", "ava", "Erik", "Alex", "Tony"] 
+sstudents = ["Martin", "chris", "Austen", "lisa", "ava", "Erik", "Alex", "Tony"]
 students = sstudents
 students
 students.each do |element|
-  puts element 
+  puts element
 end
 p = Proc.new do
   puts "I am in a proc"
 end
 p.call
-ls p 
-exit 
+ls p
+exit
