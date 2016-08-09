@@ -17,3 +17,15 @@
 #show_hide_section {
   display: none;
 }
+
+p {
+  
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
