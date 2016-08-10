@@ -9,7 +9,8 @@
   <h3>The Name</h3>
   Your Name:
   <%= text_field_tag :name, nil, id: "name_field" %>
-  <%= link_to "Add Default", "#", id: "name_link"%>
+  <%= link_to "Add Default", "#", id: "name_link", data: {disable_with: "I working on it"}%>
+  <%= submit_tag "Save", data: {disable_with: "Working..."} %>
 </div>
 
 <div>
